@@ -1,8 +1,8 @@
 # MiTiempoApp-MVI-Hilt
 
+------------
 
-
-Sencilla aplicación para android que da la previsión de temperaturas en localidades de todo el mundo (en español como lenguaje de entrada/presentación), cuyo nombre es ingresado en el cuadro texto. Arranca la aplicación mostrando la predicción térmica de la ciudad de Sevilla, ES.
+Sencilla aplicación para android que da la previsión de temperaturas en localidades de todo el mundo (en español como lenguaje de entrada/presentación), cuyo nombre es ingresado en el cuadro texto ([1](#nota)). Arranca la aplicación mostrando la predicción térmica de la ciudad de Sevilla, ES.
 
 
 ### Ejemplo de patrón MVI / Repository
@@ -30,8 +30,14 @@ La aplicación recupera de la red los datos necesarios desde una **API REST** (h
 - [Navigation component](https://developer.android.com/guide/navigation/navigation-getting-started "Navigation component")
 - [Clean Architecture](https://devexperto.com/clean-architecture-android/ "Clean Architecture")
 
-#### Nota
+#### Notas:
 
 ------------
 
 Esta muestra/plantilla es fácilmente moficable en relación a una mejora de su UI (que es minimalista), una presentación de un mayor número de datos procedente de la **API** o un mejor modelado de los mensajes de error, por ejemplo.
+
+
+------------
+
+
+(<a name="nota">1</a>) El método getFromLocationName del objeto Geocoder de Android da la latitud y la longitud dado el nombre de una población. En este caso, la API dará la información de la localidad más cercana de la que se disponga de datos. Hay que tener en cuenta que, si no se tienen datos a menos de 30 km del punto referenciado con las coordenadas proporcionadas por getFromLocationName, la salida dará un error.
