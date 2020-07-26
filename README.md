@@ -1,5 +1,4 @@
 # MiTiempoApp-MVI-Hilt
-
 ------------
 
 Sencilla aplicación para android que da la previsión de temperaturas en localidades de todo el mundo (en español como lenguaje de entrada/presentación), cuyo nombre es ingresado en el cuadro texto ([1](#nota)). Arranca la aplicación mostrando la predicción térmica de la ciudad de Sevilla, ES.
