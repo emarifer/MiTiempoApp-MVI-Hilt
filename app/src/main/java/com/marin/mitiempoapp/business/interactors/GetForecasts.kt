@@ -40,7 +40,7 @@ constructor(
 /**
  * Muestra carga / barra de progreso
  * Obtiene las coordenadas geográficas de la localidad buscada mediante
- * de Geocoder (añadiendo el idioma de búsqueda / presentación y la API KEY)
+ * el objeto Geocoder (añadiendo el idioma de búsqueda / presentación y la API KEY)
  * Obtiene los objetos forecast de la red
  * Inserta los objetos forecast en caché (base de datos Room)
  * Emite, a través de livedata, la lista de objetos forecast para que se muestre en la UI
