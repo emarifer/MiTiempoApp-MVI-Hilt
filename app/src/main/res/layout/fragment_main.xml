@@ -1,19 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical">
-
-    <SearchView
-        android:id="@+id/searchView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="top"
-        android:layout_marginTop="8dp"
-        android:queryHint="Busca localidades por nombre"
-        android:iconifiedByDefault="false"/>
+    android:layout_height="match_parent">
 
     <RelativeLayout
         android:id="@+id/progressBar"
@@ -28,53 +18,80 @@
 
     </RelativeLayout>
 
-    <TextView
-        android:id="@+id/txt_name"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        tools:text="CIUDAD"/>
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <SearchView
+            android:id="@+id/searchView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginTop="8dp"
+            android:iconifiedByDefault="false"
+            android:queryHint="Busca localidades por nombre" />
+
+        <TextView
+            android:id="@+id/txt_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            tools:text="CIUDAD" />
+
+        <TextView
+            android:id="@+id/txt_country"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            tools:text="PAÍS" />
+
+        <TextView
+            android:id="@+id/txt_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:gravity="center"
+            android:textColor="#9C27B0"
+            android:textSize="18sp"
+            tools:text="FECHA" />
+
+        <TextView
+            android:id="@+id/txt_max"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:gravity="center"
+            android:textColor="#FF0000"
+            android:textSize="18sp"
+            tools:text="MÁXIMA" />
+
+        <TextView
+            android:id="@+id/txt_min"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:gravity="center"
+            android:textColor="#0022FF"
+            android:textSize="18sp"
+            tools:text="MÍNIMA" />
+    </LinearLayout>
 
     <TextView
-        android:id="@+id/txt_country"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textSize="25sp"
-        android:layout_marginTop="16dp"
-        android:textStyle="bold"
-        tools:text="PAÍS"/>
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="32dp"
+        android:text="@string/legal_notice"
+        android:textAlignment="center"
+        android:textColor="#03A9F4"
+        android:textSize="16sp"
+        android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/txt_date"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="18dp"
-        android:gravity="center"
-        android:textColor="#9C27B0"
-        android:textSize="18sp"
-        tools:text="FECHA" />
-
-    <TextView
-        android:id="@+id/txt_max"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="18dp"
-        android:gravity="center"
-        android:textColor="#FF0000"
-        android:textSize="18sp"
-        tools:text="MÁXIMA" />
-
-    <TextView
-        android:id="@+id/txt_min"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="18dp"
-        android:gravity="center"
-        android:textColor="#0022FF"
-        android:textSize="18sp"
-        tools:text="MÍNIMA" />
-
-</LinearLayout>
+</RelativeLayout>
