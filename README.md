@@ -1,6 +1,6 @@
 # MiTiempoApp-MVI-Hilt
 
-[![MVI ](https://img.shields.io/badge/Architecture-MVI-brightgreen)](https://medium.com/quality-content/mvi-a-reactive-architecture-pattern-45c6f5096ab7)  [![android](https://img.shields.io/badge/Android-Hilt*Dagger-blue)](https://kotlinlang.org/) [![coroutines](https://img.shields.io/badge/Coroutines-Flow-red)](https://www.youtube.com/watch?v=WvGIHxUYIgA) [![Android-Navigation component ](https://img.shields.io/badge/Android-Navigation&nbsp;component-purple.svg)](https://developer.android.com/guide/navigation/navigation-getting-started)
+[![MVI ](https://img.shields.io/badge/Architecture-MVI-brightgreen)](https://medium.com/quality-content/mvi-a-reactive-architecture-pattern-45c6f5096ab7)  [![android](https://img.shields.io/badge/Android-Hilt*Dagger-blue)](https://dagger.dev/hilt/) [![coroutines](https://img.shields.io/badge/Coroutines-Flow-red)](https://www.youtube.com/watch?v=WvGIHxUYIgA) [![Android-Navigation component ](https://img.shields.io/badge/Android-Navigation&nbsp;component-purple.svg)](https://developer.android.com/guide/navigation/navigation-getting-started)
 
 Sencilla aplicación para android que da la previsión de temperaturas en localidades de todo el mundo (en español como lenguaje de entrada/presentación), cuyo nombre es ingresado en el cuadro texto ([1](#nota)). Arranca la aplicación mostrando la predicción térmica de la ciudad de Sevilla, ES.
 
