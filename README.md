@@ -15,6 +15,9 @@ La aplicación recupera de la red los datos necesarios desde una **REST API** (h
 ### Referencias (Clean Architecture, MVI, Hilt, Navigation component):
 
 ------------
+***Captura de pantalla del dispositivo***:
+
+![screenshot](screenshot/Screenshot_2020-08-06-10-01-29.png)
 
 
 ***Esquema de una Clean Architecuture***:
