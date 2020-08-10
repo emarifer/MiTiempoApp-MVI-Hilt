@@ -7,7 +7,8 @@ import com.marin.mitiempoapp.business.domain.models.Forecast
 import com.marin.mitiempoapp.business.domain.state.DataState
 import com.marin.mitiempoapp.business.interactors.GetForecasts
 import kotlinx.coroutines.ExperimentalCoroutinesApi
-import kotlinx.coroutines.flow.launchIn
+import kotlinx.coroutines.flow.catch
+import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
 
@@ -32,11 +33,15 @@ constructor(
         viewModelScope.launch {
             when(mainStateEvent) {
                 is MainStateEvent.GetForecastsEvent -> {
+                    _dataState.value = DataState.Loading
                     getForecasts.execute(mainStateEvent.locality)
-                        .onEach { dataState ->
-                            _dataState.value = dataState
+                        .onEach { forecasts ->
+                            _dataState.value = DataState.Success(forecasts)
                         }
-                        .launchIn(viewModelScope)
+                        .catch { e ->
+                            _dataState.value = DataState.Error(e)
+                        }
+                        .collect()
                 }
                 is MainStateEvent.None -> {
                     // Hacer algo

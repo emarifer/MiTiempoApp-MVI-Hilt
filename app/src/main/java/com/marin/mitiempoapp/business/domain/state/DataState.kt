@@ -1,7 +1,5 @@
 package com.marin.mitiempoapp.business.domain.state
 
-import java.lang.Exception
-
 /**
  * Created by Enrique Marín on 25/07/20.
  */
@@ -9,6 +7,6 @@ import java.lang.Exception
 sealed class DataState<out R> {
 
     data class Success<out T>(val data: T) : DataState<T>()
-    data class Error(val exception: Exception) : DataState<Nothing>()
+    data class Error(val exception: Throwable) : DataState<Nothing>()
     object Loading : DataState<Nothing>()
 }
